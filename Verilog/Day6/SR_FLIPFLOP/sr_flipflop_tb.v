@@ -17,11 +17,13 @@ module sr_flipflop_tb;
   always #10 s=~s;
    always #15 clk=~clk;
   
-  always #20 r=~r;
+  always #50 r=~r;
   initial begin
     $monitor("s=%d r=%d clk=%d  q=%d", s,r,clk,q);
   end
 endmodule
   
+  
+    
   
     
