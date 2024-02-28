@@ -19,7 +19,7 @@ module jk_flipflop(input j,
     q=1;   
   end
   else 
-    q=1'bx;
+    q=~q;
    assign qbar=~q;
   
 endmodule
