@@ -3,18 +3,12 @@ module task_calling_function;
     input [4:0] a,b;   
       logical=a & b;
     $display("result=%b",logical);
-  endfunction
-  
+  endfunction 
   task operation;//Task declaration
-    input [4:0] result;
-    logical(10,11);
-   
+    logical(10,11);//function calling
   endtask
   initial begin
-    reg[1:0] log_result;
-     operation(log_result);//Task calling
-   
-   
+     operation;//task calling   
   end
 endmodule
     
