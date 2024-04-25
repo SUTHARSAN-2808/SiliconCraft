@@ -4,7 +4,7 @@ module sr_flipflop(input s,
                    input reset,
                   output reg q,
                    output reg qbar);
-  always @(posedge clk or negedge reset)
+  always @(posedge clk or negedge reset)begin
     if (~reset)
       q=0;
    else if(s==0 && r==0)begin
@@ -18,6 +18,7 @@ module sr_flipflop(input s,
     end
     else
      q=1'bx;
+  end
      assign qbar=~q;
     
 endmodule
