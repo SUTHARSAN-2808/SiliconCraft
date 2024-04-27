@@ -6,20 +6,20 @@ module jk_flipflop(input j,
                    output reg qbar);
   always @(posedge clk)
     if(reset)begin
-      q=0;
+      q<=0;
      
     end
   else if(j == 0 && k == 0)begin
-    q=q;  
+    q<=q;  
   end
     else if(j == 0 && k == 1)begin
-      q=0;
+      q<=0;
     end
   else if(j == 1 && k ==0)begin
-    q=1;   
+    q<=1;   
   end
   else 
-    q=~q;
+    q<=~q;
    assign qbar=~q;
   
 endmodule
