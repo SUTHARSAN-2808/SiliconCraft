@@ -1,7 +1,7 @@
 module arithmetic_code;
 int a = 10;
 int b = 5;
-int x,y;
+longint x,y;
 initial begin
   $display("-------------------------");
   $display("\n \t the value of a = %0d",a);
