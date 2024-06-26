@@ -1,1 +1,23 @@
+//Unpacked MultiDim Array
+module unpacked_muldim_array;
+  
+  byte a[2:0][3:0];
+  
+  initial begin
+   
+    foreach(a[i])begin
+      foreach(a[i][j])begin
+        a[i][j]=$urandom_range(20,78);
+      end
+    end
+    
+    foreach(a[i])begin
+      foreach(a[i][j])begin
+        $display("a[%0d][%0d]=%d",i,j,a[i][j]);
+      end
+    end
+    
+  end
+  
+endmodule
 
