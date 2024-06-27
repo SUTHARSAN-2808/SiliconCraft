@@ -3,7 +3,7 @@ logic [0:7] a,b,c,x,y,z;
 
 initial begin
 a=4'd4;
-b=3'b111;
+b=3'b1x1;
 c=1'bx;
 $display("\n \t The value of a is %0d",a);
 $display("\n \t The value of b is %0b",b);
