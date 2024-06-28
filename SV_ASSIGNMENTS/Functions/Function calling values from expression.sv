@@ -1,6 +1,6 @@
 //Function calling with values from expression
 module func_argu;
-  bit [4:0] a,b,c,result;
+  bit [4:0] a,b,c;
   initial begin
     
     $display("Answer is=%0d",sum(1,13));
