@@ -1,4 +1,4 @@
-`include "top.sv"
+`include "testbench.sv"
    module top();
    
    
