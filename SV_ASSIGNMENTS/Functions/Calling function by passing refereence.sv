@@ -46,11 +46,8 @@ module func_pass_by_ref;
     int temp;
     $display("\n\tentered into without ref function");
     temp=var1;
-    $display(temp,",",var1);
     var1=var2;
-    $display(var1,",",var2);
     var2=temp;
-    $display(var2,",",temp);
     $display("\tswapped variables by without using ref ");
     return var1+var2;
   endfunction : sum_without_ref
