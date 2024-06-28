@@ -12,4 +12,4 @@
        counter_up <= counter_up + 3'd1;
      end 
      assign counter = counter_up;
-     endmodule:
+     endmodule
