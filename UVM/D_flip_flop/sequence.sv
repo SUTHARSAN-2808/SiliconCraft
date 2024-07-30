@@ -12,9 +12,6 @@ class sequ extends uvm_sequence#(seq_item);
     forever begin
       `uvm_info(get_type_name(), "Starting sequence", UVM_HIGH);
       pkt = seq_item::type_id::create("pkt");
-//       start_item(pkt);
- //        pkt.randomize();
-//       finish_item(pkt);
       `uvm_do(pkt)
     end
   endtask
