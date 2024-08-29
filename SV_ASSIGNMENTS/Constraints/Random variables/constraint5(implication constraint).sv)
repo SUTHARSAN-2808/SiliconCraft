@@ -1,1 +1,16 @@
+//implication constraint
+class cyclic_dependencies;
+  randc bit[7:0] data,addr;
+  constraint c1{(addr>10) -> (data==200);}
+endclass
 
+module m1;
+  cyclic_dependencies cycle;
+  initial begin
+    cycle=new();
+    repeat(100)begin
+      cycle.randomize();
+      $display("addr = %d data =%d",cycle.addr,cycle.data);
+    end
+  end
+endmodule
