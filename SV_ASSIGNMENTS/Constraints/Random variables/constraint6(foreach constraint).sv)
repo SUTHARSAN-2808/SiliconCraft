@@ -1,1 +1,18 @@
+class loop;
+  rand reg[9:0] a[1:0][1:0];
+  constraint c1{foreach (a[i,j])
+    a[i][j] inside {[0:250]};}
+endclass
+                 
+module m1;
+  loop cycle;
+  initial begin
 
+    cycle=new();
+  
+    void'(cycle.randomize());
+    foreach(cycle.a[i,j])begin
+        $display("a[%d][%d]=%d",i,j,cycle.a[i][j]);
+    end
+  end
+endmodule
