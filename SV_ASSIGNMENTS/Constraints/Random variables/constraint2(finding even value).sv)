@@ -1,1 +1,15 @@
-
+//Even value
+class even_value;
+  rand bit[3:0]a;
+  constraint c1{a%2==0;}
+endclass
+  module m1;
+  even_value val;
+  initial begin
+    val=new();
+    repeat(10)begin
+      val.randomize();
+      $display("value=%d",val.a);
+    end
+  end
+endmodule
